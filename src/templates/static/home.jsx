@@ -131,11 +131,13 @@ const AccountsTabContent = ({
                                 list_text={list_text_three}
                             />
                         }
-                        <AccountsListItem
-                            image={image_four}
-                            list_header={list_header_four}
-                            list_text={list_text_four}
-                        />
+                        { list_header_four &&
+                            <AccountsListItem
+                                image={image_four}
+                                list_header={list_header_four}
+                                list_text={list_text_four}
+                            />
+                        }
                     </div>
                 </div>
             </div>
