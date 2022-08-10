@@ -3,7 +3,7 @@ import React from 'react';
 const Complaints = () => (
     <div>
         <h2 data-anchor='complaints-and-disputes'>{it.L('Complaints and disputes')}</h2>
-        <p>{it.L('If the client would like to file a complaint about the Company’s service, the client can send the details related to the client’s complaint to the Company at [_1]complaints@binary.com[_2]. The Company will investigate the client’s enquiry and send the client a final response within 15 days from the date on which the complaint is received.', '<a href="mailto:complaints@binary.com">', '</a>')}</p>
+        <p>{it.L('If the client would like to file a complaint about the Company’s service, the client can send the details related to the client’s complaint to the Company at [_1]complaints@deriv.com[_2]. The Company will investigate the client’s enquiry and send the client a final response within 15 days from the date on which the complaint is received.', '<a href="mailto:complaints@deriv.com">', '</a>')}</p>
         <p>{it.L('If the client’s account is registered with Deriv (BVI), and the Company does not resolve the client’s complaint to the client’s satisfaction, the client can escalate the complaint to the Financial Commission. In that case, the client’s complaint will go through the following procedure:')}</p>
         
         <h2 data-anchor='Filing complaints'>{it.L('Filing complaints')}</h2>
