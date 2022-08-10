@@ -11,7 +11,6 @@ const Complaints = () => (
             <li>{it.L('The client may file a complaint with the Financial Commission up to 45 days after the incident.')}</li>
             <li>{it.L('The Financial Commission has 5 days to acknowledge that the client’s complaint was received and 14 days to answer the complaint through the Company’s Internal Dispute Resolution (IDR) procedure.')}</li>
             <li>{it.L('The client will be able to file a complaint with the Financial Commission only if the client is not satisfied with the Company’s decision or if the decision wasn’t made within 14 days.')}</li>
-            <li>{it.L('The timeframe or duration of the contract as defined by the client\'s order execution')}</li>
         </ul>
 
         <h2 data-anchor='Investigation phase'>{it.L('Investigation phase')}</h2>
