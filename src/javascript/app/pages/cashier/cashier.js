@@ -14,6 +14,7 @@ const BinaryPjax             = require('../../base/binary_pjax');
 const Accounts               = require('../user/accounts');
 const Header                 = require('../../base/header');
 const isEuCountry            = require('../../common/country_base').isEuCountry;
+const getLanguage            = require('../../../_common/language').get;
 
 const Cashier = (() => {
     let href = '';
@@ -353,7 +354,11 @@ const Cashier = (() => {
         onLoad,
         PaymentMethods: {
             onLoad: () => {
-                window.location.href = 'https://deriv.com/payment-methods/';
+                const current_page = { page: window.location.href };
+                const previous_page = document.referrer;
+                history.replaceState({} , current_page, previous_page);
+                const lang  = getLanguage();
+                window.location.href = `https://deriv.com/${lang.toLowerCase()}/payment-methods/`;
             },
         },
     };
