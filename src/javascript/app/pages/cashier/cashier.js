@@ -358,7 +358,7 @@ const Cashier = (() => {
                 const previous_page = document.referrer;
                 history.replaceState({} , current_page, previous_page);
                 const lang  = getLanguage();
-                window.location.href = `https://deriv.com/${lang.toLowerCase()}/payment-methods/`;
+                window.location.href = `https://deriv.com/${lang.toLowerCase().replace(/_/g, '-')}/payment-methods/`;
             },
         },
     };
