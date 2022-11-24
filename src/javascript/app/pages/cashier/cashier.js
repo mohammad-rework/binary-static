@@ -347,6 +347,11 @@ const Cashier = (() => {
                 }
             });
         }
+        const lang  = getLanguage();
+        const all_links = Array.from(document.getElementsByTagName('a'));
+        const payment_methods_link = all_links.filter(link => link.href.includes('payment_methods'));
+        payment_methods_link.map(a => a.href = `https://deriv.com/${lang.toLowerCase().replace(/_/g, '-')}/payment-methods/`);
+        
         showContent();
     };
 
@@ -354,9 +359,6 @@ const Cashier = (() => {
         onLoad,
         PaymentMethods: {
             onLoad: () => {
-                const current_page = { page: window.location.href };
-                const previous_page = document.referrer;
-                history.replaceState({} , current_page, previous_page);
                 const lang  = getLanguage();
                 window.location.href = `https://deriv.com/${lang.toLowerCase().replace(/_/g, '-')}/payment-methods/`;
             },
